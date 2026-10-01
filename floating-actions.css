@@ -1,0 +1,66 @@
+/* ==========================================================================
+   FLOATING ACTION BUTTONS (CALL / WHATSAPP)
+   ========================================================================== */
+
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.float-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.float-whatsapp:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+}
+
+.float-call {
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #0b0c10;
+  border: 1px solid var(--gold-light);
+}
+
+.float-call:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px var(--gold-glow);
+}
+
+.pulse-aura {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 60%);
+  animation: pulseAura 2.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseAura {
+  0% { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}

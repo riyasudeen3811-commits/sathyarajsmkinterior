@@ -1,0 +1,22 @@
+/* ==========================================================================
+   YES MK INTERIOR WORK & FALSE CEILING - MAIN CSS ENTRY POINT
+   Flat Root Directory Structure
+   ========================================================================== */
+
+/* 1. Tokens & Reset */
+@import './variables.css';
+@import './base.css';
+
+/* 2. Components & Layouts */
+@import './navbar.css';
+@import './hero.css';
+@import './services.css';
+@import './about.css';
+@import './portfolio.css';
+@import './contact.css';
+@import './modals.css';
+@import './footer.css';
+@import './floating-actions.css';
+
+/* 3. Responsive Adaptations */
+@import './responsive.css';

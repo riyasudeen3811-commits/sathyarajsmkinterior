@@ -1,0 +1,218 @@
+/* ==========================================================================
+   SERVICES & WHO WE SERVE GRID STYLES
+   ========================================================================== */
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 12px 35px var(--gold-glow);
+}
+
+.service-img-wrap {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-img-wrap img {
+  transform: scale(1.08);
+}
+
+.service-num {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(11, 12, 16, 0.8);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.service-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--gold-champagne);
+  margin-bottom: 12px;
+}
+
+.service-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.service-checklist {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.service-checklist li {
+  font-size: 0.88rem;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold-light);
+  font-weight: bold;
+}
+
+.service-btn-link {
+  color: var(--gold-light);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.service-btn-link:hover {
+  letter-spacing: 1px;
+}
+
+.service-card-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-card-wide .service-img-wrap {
+  height: 100%;
+  min-height: 280px;
+}
+
+.service-badge-gold {
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+/* WHO WE SERVE GRID */
+.serve-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.serve-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.serve-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 10px 30px var(--gold-glow);
+}
+
+.serve-img-box {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.serve-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+  transition: transform 0.5s ease;
+}
+
+.serve-card:hover .serve-img-box img {
+  transform: scale(1.08);
+}
+
+.serve-icon {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(11, 12, 16, 0.85);
+  border: 1px solid var(--gold-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.serve-info {
+  padding: 20px;
+}
+
+.serve-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.serve-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.serve-card-full {
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+.serve-card-full .serve-img-box {
+  width: 40%;
+  height: 100%;
+  min-height: 180px;
+}
+
+.serve-card-full .serve-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

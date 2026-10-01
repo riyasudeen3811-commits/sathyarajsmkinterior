@@ -1,0 +1,104 @@
+/* ==========================================================================
+   FOOTER & BANNER CTA STYLES
+   ========================================================================== */
+
+/* Home Banner CTA */
+.home-cta-banner {
+  background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(18,20,29,0.95) 100%);
+  border-top: 1px solid var(--gold-primary);
+  border-bottom: 1px solid var(--gold-primary);
+  padding: 60px 24px;
+}
+
+.cta-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cta-text-wrap h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--gold-champagne);
+  margin-top: 8px;
+}
+
+.cta-text-wrap p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
+.footer-section {
+  background: #06070a;
+  border-top: 1px solid var(--gold-border);
+  padding: 50px 24px 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-logo-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  border: 1.5px solid var(--gold-primary);
+  box-shadow: 0 0 18px var(--gold-glow);
+  margin: 0 auto 12px;
+  object-fit: contain;
+  padding: 2px;
+  background: #0c0c0e;
+}
+
+.footer-brand .brand-title {
+  font-size: 1.5rem;
+  color: var(--gold-light);
+}
+
+.footer-brand .brand-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: var(--text-gold);
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.f-stat {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.f-num {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

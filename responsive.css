@@ -1,0 +1,361 @@
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE DESIGN & MOBILE FIXES
+   ========================================================================== */
+
+/* Global Overflow Protection */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Tablet Breakpoints (max-width: 992px) */
+@media (max-width: 992px) {
+  .hero-title { font-size: 2.5rem; }
+  .about-wrapper { grid-template-columns: 1fr; gap: 30px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+  .service-card-wide { grid-template-columns: 1fr; }
+  .serve-card-full { flex-direction: column; }
+  .serve-card-full .serve-img-box, .serve-card-full .serve-info { width: 100%; }
+  .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navigation & Slim Mobile Header */
+  .navbar-header {
+    height: 62px;
+  }
+  .nav-container {
+    padding: 8px 16px;
+    height: 100%;
+  }
+  .brand-logo {
+    gap: 8px;
+  }
+  .nav-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+  .brand-title {
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+  }
+  .brand-subtitle {
+    display: none;
+  }
+  .phone-link-header {
+    display: none;
+  }
+  .menu-toggle { 
+    display: flex; 
+  }
+
+  /* Slide-down Mobile Navigation Drawer */
+  .nav-links {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 12, 16, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1.5px solid var(--gold-primary);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 12px;
+    transform: translateY(-150%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.95);
+    z-index: 9999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero Section Optimizations */
+  .hero-logo-badge {
+    display: none;
+  }
+  .hero-section {
+    padding: 76px 16px 28px;
+    min-height: auto;
+  }
+  .hero-trust-pill {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+  .hero-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem);
+    line-height: 1.22;
+    margin-bottom: 12px;
+  }
+  .hero-subtitle {
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+  }
+  .hero-tagline-quote {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    margin-bottom: 18px;
+  }
+  .sub-quote {
+    font-size: 0.8rem;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* Compact Hero Stats Bar */
+  .hero-stats-bar {
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+  .stat-card {
+    flex: 1;
+    text-align: center;
+  }
+  .stat-number-wrap {
+    font-size: 1.5rem;
+  }
+  .stat-label {
+    font-size: 0.65rem;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .stat-divider {
+    width: 1px;
+    height: 30px;
+    background: var(--gold-border);
+  }
+
+  /* Section Spacing & Titles */
+  .section-padding {
+    padding: 45px 16px;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  /* Core Services & Sectors Grids */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .serve-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .service-card {
+    border-radius: var(--radius-sm);
+  }
+  .service-img-wrap {
+    height: 200px;
+  }
+
+  /* Running Portfolio Marquee Banner on Mobile */
+  .portfolio-marquee-section {
+    padding: 30px 0;
+    margin-top: 30px;
+  }
+  .marquee-header {
+    margin-bottom: 20px;
+    padding: 0 16px;
+  }
+  .marquee-title {
+    font-size: 1.45rem;
+  }
+  .marquee-subtitle {
+    font-size: 0.85rem;
+  }
+  .marquee-card {
+    width: 270px;
+  }
+  .marquee-img-box {
+    height: 180px;
+  }
+  .marquee-card-info {
+    padding: 12px 14px;
+  }
+  .marquee-card-info h4 {
+    font-size: 0.98rem;
+  }
+  .marquee-card-info p {
+    font-size: 0.8rem;
+  }
+
+  /* Slideshow Stage */
+  .slideshow-stage { 
+    height: 300px; 
+  }
+  .slideshow-master-box {
+    padding: 14px;
+  }
+  .slide-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+  }
+
+  /* CTA Banner & Contact */
+  .cta-banner-content { 
+    flex-direction: column; 
+    text-align: center; 
+    gap: 18px;
+  }
+  .cta-text-wrap h2 {
+    font-size: 1.6rem;
+  }
+  .cta-btns { 
+    width: 100%; 
+    flex-direction: column;
+    justify-content: center; 
+    gap: 10px;
+  }
+  .cta-btns .btn {
+    width: 100%;
+  }
+  .contact-form-block { 
+    padding: 20px 16px; 
+  }
+  .form-row { 
+    grid-template-columns: 1fr; 
+  }
+
+  /* Lightbox & Modal Dialogs on Mobile */
+  .modal-overlay {
+    padding: 16px;
+  }
+  .modal-card {
+    padding: 24px 18px;
+    max-width: 100%;
+  }
+  .lightbox-content img {
+    max-height: 60vh;
+    width: 100%;
+    object-fit: contain;
+  }
+  .lightbox-close {
+    top: -36px;
+    right: 0;
+    font-size: 1.8rem;
+  }
+  .lightbox-info h3 {
+    font-size: 1.15rem;
+  }
+  .lightbox-info p {
+    font-size: 0.85rem;
+  }
+
+  /* App-Style Fixed Bottom Action Bar for Mobile */
+  body {
+    padding-bottom: 68px;
+  }
+  .floating-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    width: 100%;
+    background: rgba(11, 12, 16, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--gold-primary);
+    padding: 8px 12px max(8px, env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    z-index: 99999;
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.9);
+  }
+  .float-btn {
+    width: 100%;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    box-shadow: none;
+  }
+  .float-text {
+    display: inline !important;
+  }
+  .pulse-aura {
+    display: none;
+  }
+}
+
+/* Small Smartphone Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.65rem;
+  }
+  .hero-subtitle {
+    font-size: 0.86rem;
+  }
+  .stat-number-wrap {
+    font-size: 1.35rem;
+  }
+  .stat-label {
+    font-size: 0.6rem;
+  }
+  .marquee-card {
+    width: 240px;
+  }
+  .marquee-img-box {
+    height: 160px;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    min-height: 46px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Extra Small Devices (max-width: 380px) */
+@media (max-width: 380px) {
+  .brand-title {
+    font-size: 0.78rem;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .stat-number-wrap {
+    font-size: 1.25rem;
+  }
+  .marquee-card {
+    width: 220px;
+  }
+  .float-btn {
+    font-size: 0.8rem;
+  }
+}

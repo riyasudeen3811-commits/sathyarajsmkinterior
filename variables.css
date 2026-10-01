@@ -1,0 +1,34 @@
+/* ==========================================================================
+   DESIGN SYSTEM VARIABLES & THEME TOKENS
+   Palette: Deep Charcoal / Metallic Gold / Champagne Gold / Dark Wood
+   ========================================================================== */
+
+:root {
+  --bg-primary: #0b0c10;
+  --bg-secondary: #12141d;
+  --bg-card: #181a26;
+  --bg-card-hover: #202334;
+  --bg-glass: rgba(20, 22, 34, 0.85);
+
+  --gold-primary: #d4af37;
+  --gold-light: #ffd700;
+  --gold-champagne: #f4e8c1;
+  --gold-dark: #aa8210;
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-border: rgba(212, 175, 55, 0.25);
+
+  --text-white: #ffffff;
+  --text-muted: #a0a5b8;
+  --text-gold: #e6c687;
+
+  --wood-dark: #2a1e17;
+  
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Outfit', sans-serif;
+
+  --transition-fast: 0.25s ease;
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
