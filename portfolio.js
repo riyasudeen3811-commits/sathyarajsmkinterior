@@ -51,24 +51,35 @@ export function initMarqueeBanner() {
   const track = document.getElementById('servicesMarqueeTrack');
   if (!track) return;
 
-  track.innerHTML = '';
-  // Duplicate array for seamless infinite marquee loop
   const marqueeItems = [...portfolioData, ...portfolioData];
 
-  marqueeItems.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'marquee-card';
-    card.innerHTML = `
-      <div class="marquee-img-box">
-        <img src="${item.img}" alt="${item.title}" loading="lazy" decoding="async">
-        <span class="marquee-badge-pill">${item.categoryLabel}</span>
-      </div>
-      <div class="marquee-card-info">
-        <h4>${item.title}</h4>
-        <p>${item.desc}</p>
-      </div>
-    `;
-    card.addEventListener('click', () => openLightbox(item));
-    track.appendChild(card);
-  });
+  // If track is empty, dynamically render all cards
+  if (track.children.length === 0) {
+    track.innerHTML = '';
+    marqueeItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'marquee-card';
+      card.innerHTML = `
+        <div class="marquee-img-box">
+          <img src="${item.img}" alt="${item.title}" loading="lazy" decoding="async">
+          <span class="marquee-badge-pill">${item.categoryLabel}</span>
+        </div>
+        <div class="marquee-card-info">
+          <h4>${item.title}</h4>
+          <p>${item.desc}</p>
+        </div>
+      `;
+      card.addEventListener('click', () => openLightbox(item));
+      track.appendChild(card);
+    });
+  } else {
+    // If cards are pre-rendered in HTML, attach click lightbox handlers
+    const cards = track.querySelectorAll('.marquee-card');
+    cards.forEach((card, index) => {
+      const item = marqueeItems[index % marqueeItems.length];
+      if (item) {
+        card.addEventListener('click', () => openLightbox(item));
+      }
+    });
+  }
 }
