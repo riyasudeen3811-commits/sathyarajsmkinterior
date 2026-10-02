@@ -1,8 +1,8 @@
 // ==========================================================================
-// YES MK INTERIOR WORK & FALSE CEILING - MAIN APPLICATION BOOTSTRAP
+// SMK INTERIOR WORKS & FALSE CEILING - MAIN APPLICATION BOOTSTRAP
+// Native ES Module Entry Point for Web Server / Domain Deployment
 // ==========================================================================
 
-import './style.css';
 import { initNavbar } from './navbar.js';
 import { initStatsCounter } from './stats.js';
 import { initSlideshow } from './slideshow.js';
@@ -10,22 +10,32 @@ import { initPortfolioGrid, initMarqueeBanner } from './portfolio.js';
 import { initConsultationModal, initLightboxModal } from './modals.js';
 import { initContactForm } from './contact.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function bootstrapApp() {
   // Global components initialization
   initNavbar();
   initStatsCounter();
   initConsultationModal();
+  initLightboxModal();
 
   // Page specific component initialization
   if (document.getElementById('slideshowTrack')) {
     initSlideshow();
+  }
+  
+  if (document.getElementById('portfolioGrid')) {
     initPortfolioGrid();
-    initLightboxModal();
-  } else if (document.getElementById('servicesMarqueeTrack')) {
+  }
+
+  if (document.getElementById('servicesMarqueeTrack')) {
     initMarqueeBanner();
-    initLightboxModal();
   }
 
   // Contact page form initialization
   initContactForm();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootstrapApp);
+} else {
+  bootstrapApp();
+}
