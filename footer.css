@@ -96,6 +96,57 @@
   font-weight: 700;
 }
 
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.insta-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+}
+
+.insta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(220, 39, 67, 0.5);
+}
+
+.wa-btn {
+  background: #25D366;
+  color: #ffffff;
+}
+
+.wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(37, 211, 102, 0.5);
+}
+
+.call-btn {
+  background: var(--gold-primary);
+  color: #0b0c10;
+}
+
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px var(--gold-glow);
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 20px;

@@ -87,9 +87,27 @@
   color: #25d366;
 }
 
+.insta-highlight {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e1306c;
+}
+
+.btn-insta {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-insta:hover {
+  box-shadow: 0 8px 25px rgba(220, 39, 67, 0.5);
+  transform: translateY(-2px);
+}
+
 .contact-buttons-row {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .location-map-card {
